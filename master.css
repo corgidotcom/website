@@ -29,6 +29,7 @@ h1{
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
     color:rgb(0, 0, 0);
+    text-align: center;
 }
 
 hr {
@@ -39,21 +40,65 @@ hr {
     border-width: 0;
     height: 3px;
 }
+
+#chilllethr {
+    background: linear-gradient(90deg, rgba(175,31,31,1) 0%, rgba(190,190,190,1) 100%);
+    width:450px;
+}
+
 h2{
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
     color:rgb(0, 0, 0);
 }
-#wrapper {
-
+ul{
+    font-family: 'League Spartan', sans-serif;
+    font-size:20px;
+    font-weight: 400;
+    color:rgb(0, 0, 0);
+    text-align: left;
 }
+li {
+    font-family: 'League Spartan', sans-serif;
+    font-size:20px;
+    font-weight: 400;
+    color:rgb(0, 0, 0);
+    text-align: left;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 #buttonbar{
     padding:5px 10px 10px 10px;
-    float:left;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    }
+    min-width: 280px;
+    order: 1;
+}
+
+#todolist{
+    padding:5px 10px 10px 10px;
+    min-width: 280px;
+    order: 3;
+}
+
+#title {
+    flex-grow: 2;
+    order: 2;
+    display: flex;
+    justify-content: center;
+}
+
+#titlewrapper {
+    max-width: 800px;
+    
+}
+#topleftarrow {
+    padding:5px 10px 10px 10px;
+    float:left
+}
 .paraimage {
     float:right;
     height: 100px;
@@ -65,8 +110,26 @@ h2{
     padding:5px 10px 10px 10px;
     position: fixed;
     bottom: 10px;
+    left: 0;
     margin-left:auto;
     margin-right:auto;
-    width: 50%;
+    width: 100%;
+    text-align: center;
 }
 
+
+body {
+    background-color:#918a7c;
+    line-height:20px;
+}
+
+#buttonbar h2 {
+    text-align:left;
+    font-size:25px;
+    margin-left:10px;
+}
+#buttonbar hr {
+    margin-left:5px;
+    width:137px;
+    margin-top:-15px;
+}
