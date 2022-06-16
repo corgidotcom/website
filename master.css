@@ -1,0 +1,42 @@
+p{
+    font-family: 'League Spartan', sans-serif;
+    font-size:20px;
+    font-weight: 400;
+    color:rgb(0, 0, 0);
+    text-align: left;
+}
+
+h1{
+    font-size:55px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    color:rgb(0, 0, 0);
+}
+
+hr {
+    background: rgb(175,31,31);
+    background: linear-gradient(90deg, rgba(175,31,31,1) 0%, rgba(2,0,36,1) 100%);
+    margin-top:-20px;
+    width: 550px;
+    border-width: 0;
+    height: 3px;
+}
+h2{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    color:rgb(0, 0, 0);
+}
+#wrapper {
+
+}
+#buttonbar{
+    padding:5px 10px 10px 10px;
+    float:left;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    }
+.paraimage {
+    float:right;
+    height: 100px;
+}
