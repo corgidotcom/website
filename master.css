@@ -133,3 +133,9 @@ body {
     width:137px;
     margin-top:-15px;
 }
+.borderimg {
+    margin:auto;
+    margin-top:100px;
+    border:2px;
+    border-style:solid;
+}
