@@ -41,9 +41,12 @@ hr {
     height: 3px;
 }
 
-a {
-    color:black;
-}
+a { text-decoration:none; color:black;}
+a:visited { text-decoration:none; color:black;}
+a:hover { text-decoration:none; color:black;}
+a:focus { text-decoration:none; color:black;}
+a:active { text-decoration:none; color:black;}
+
 #chilllethr {
     background: linear-gradient(90deg, rgba(175,31,31,1) 0%, rgba(190,190,190,1) 100%);
     width:450px;
@@ -109,6 +112,7 @@ li {
 .cloude {
     font-family: 'Cloude Regular 1.0', sans-serif;
 }
+
 #hotlinewebring{
     padding:5px 10px 10px 10px;
     position: fixed;
