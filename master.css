@@ -41,6 +41,9 @@ hr {
     height: 3px;
 }
 
+a {
+    color:black;
+}
 #chilllethr {
     background: linear-gradient(90deg, rgba(175,31,31,1) 0%, rgba(190,190,190,1) 100%);
     width:450px;
