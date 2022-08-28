@@ -20,7 +20,7 @@ p{
     font-family: 'League Spartan', sans-serif;
     font-size:20px;
     font-weight: 400;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     text-align: left;
 }
 
@@ -28,7 +28,7 @@ h1{
     font-size:55px;
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
-    color:rgb(0, 0, 0);
+    color:white;
     text-align: center;
 }
 
@@ -41,11 +41,11 @@ hr {
     height: 3px;
 }
 
-a { text-decoration:none; color:black;}
-a:visited { text-decoration:none; color:black;}
-a:hover { text-decoration:none; color:black;}
-a:focus { text-decoration:none; color:black;}
-a:active { text-decoration:none; color:black;}
+a { text-decoration:none; color:white;}
+a:visited { text-decoration:none; color:white;}
+a:hover { text-decoration:none; color:white;}
+a:focus { text-decoration:none; color:white;}
+a:active { text-decoration:none; color:white;}
 
 #chilllethr {
     background: linear-gradient(90deg, rgba(175,31,31,1) 0%, rgba(190,190,190,1) 100%);
@@ -55,20 +55,20 @@ a:active { text-decoration:none; color:black;}
 h2{
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
-    color:rgb(0, 0, 0);
+    color:white;
 }
 ul{
     font-family: 'League Spartan', sans-serif;
     font-size:20px;
     font-weight: 400;
-    color:rgb(0, 0, 0);
+    color:white;
     text-align: left;
 }
 li {
     font-family: 'League Spartan', sans-serif;
     font-size:20px;
     font-weight: 400;
-    color:rgb(0, 0, 0);
+    color:white;
     text-align: left;
 }
 
@@ -126,7 +126,8 @@ li {
 
 
 body {
-    background-color:#918a7c;
+    background-image: url("media/star.gif");
+    background-color: black;
     line-height:20px;
 }
 
@@ -143,6 +144,7 @@ body {
 .borderimg {
     border:2px;
     border-style:solid;
+    border-color:white;
 }
 .advert {
     background-color: #bebebe;
