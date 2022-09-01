@@ -12,9 +12,13 @@
 
 <body>
     <div id="wrapper">
-        <audio autoplay="" loop="">
+        <audio autoplay="" loop="" id="girls">
             <source src="media/girls.mp3" autoplay="true" width="10" height="10">
           </audio>
+          <script>
+            var audio = document.getElementById("girls");
+            audio.volume = 0.2;
+          </script>
         <div id="title">
             <div id="titlewrapper" style="max-width:800px">
                 <h1> <img src="media/speed.gif" height="45px" style="margin-right:10px;" align="bottom"> About Me! <img

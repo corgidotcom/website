@@ -60,9 +60,13 @@
       <br>
       <img src="media/axbut.gif" style="margin-left:10px;">
       <br>
-    <audio autoplay="" loop="">
+    <audio autoplay="" loop="" id="realitysurf">
      <source src="media/realitysurf.mp3" autoplay="true" width="10" height="10">
    </audio>
+   <script>
+    var audio = document.getElementById("realitysurf");
+    audio.volume = 0.2;
+  </script>
     </div>
     <div id="todolist">
       <h2 style="text-align:right;font-size:25px;margin-right:10px;">To Do List</h2>
