@@ -133,14 +133,11 @@ li {
     width: 100%;
     text-align: center;
 }
-
-
 body {
     background-image: url("media/star.gif");
     background-color: black;
     line-height:20px;
 }
-
 #buttonbar h2 {
     text-align:left;
     font-size:25px;
@@ -178,4 +175,7 @@ body {
     width:700px;
     margin:auto;
     order:2;
+}
+* {
+    cursor: url('media/cursor.png'), auto;
 }
