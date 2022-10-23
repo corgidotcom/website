@@ -15,22 +15,15 @@ window.onload = () => {
     }
 
     musicbutton.onclick = function(){
-        let mySrc = musicbutton.getAttribute("src");
-        if(mySrc == "media/pause.png")
+        if(audio.paused == false)
         {
+            audio.pause();
             musicbutton.setAttribute('src', "media/play.png")
         }
         else
         {
-            musicbutton.setAttribute('src', "media/pause.png")
-        }
-        if(audio.paused == false)
-        {
-            audio.pause();
-        }
-        else
-        {
             audio.play();
+            musicbutton.setAttribute('src', "media/pause.png")
         }
     }
 }
