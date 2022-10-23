@@ -1,34 +1,24 @@
-let musicbutton;
-var audio;
+let musicbutton = document.querySelector('.musicbutton')
+var audio = document.getElementById("bgm3");
+audio.volume = 0.8
+audio.paused = false
 
-window.onload = () => {
-    musicbutton = document.querySelector('.musicbutton')
-    audio = document.getElementById("bgm3");
-    audio.volume = 0.8;
-    audio.paused = false;
-    if (audio.paused) {
+musicbutton.onclick = function(){
+    let mySrc = musicbutton.getAttribute("src");
+    if(mySrc == "media/pause.png")
+    {
         musicbutton.setAttribute('src', "media/play.png")
-    } else {
+    }
+    else
+    {
         musicbutton.setAttribute('src', "media/pause.png")
     }
-
-    musicbutton.onclick = function(){
-        let mySrc = musicbutton.getAttribute("src");
-        if(mySrc == "media/pause.png")
-        {
-            musicbutton.setAttribute('src', "media/play.png")
-        }
-        else
-        {
-            musicbutton.setAttribute('src', "media/pause.png")
-        }
-        if(audio.paused == false)
-        {
-            audio.pause();
-        }
-        else
-        {
-            audio.play();
-        }
+    if(audio.paused == false)
+    {
+        audio.pause();
+    }
+    else
+    {
+        audio.play();
     }
 }
