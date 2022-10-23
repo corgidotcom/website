@@ -177,8 +177,8 @@ body {
     order:2;
 }
 .musicbutton {
-    max-width:100px;
-    max-height:100px;
+    width:100px;
+    height:100px;
     position:fixed;
     padding:5px 10px 10px 10px;
     bottom: 10px;
