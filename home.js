@@ -1,24 +1,34 @@
-let musicbutton = document.querySelector('.musicbutton')
-var audio = document.getElementById("realitysurf");
-audio.volume = 0.2
-audio.paused = false
+let musicbutton;
+var audio;
 
-musicbutton.onclick = function(){
-    let mySrc = musicbutton.getAttribute("src");
-    if(mySrc == "media/pause.png")
-    {
+window.onload = () => {
+    musicbutton = document.querySelector('.musicbutton')
+    audio = document.getElementById("realitysurf");
+    audio.volume = 0.2
+    audio.paused = false
+    if (audio.paused) {
         musicbutton.setAttribute('src', "media/play.png")
-    }
-    else
-    {
+    } else {
         musicbutton.setAttribute('src', "media/pause.png")
     }
-    if(audio.paused == false)
-    {
-        audio.pause();
-    }
-    else
-    {
-        audio.play();
+
+    musicbutton.onclick = function(){
+        let mySrc = musicbutton.getAttribute("src");
+        if(mySrc == "media/pause.png")
+        {
+            musicbutton.setAttribute('src', "media/play.png")
+        }
+        else
+        {
+            musicbutton.setAttribute('src', "media/pause.png")
+        }
+        if(audio.paused == false)
+        {
+            audio.pause();
+        }
+        else
+        {
+            audio.play();
+        }
     }
 }
