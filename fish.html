@@ -21,7 +21,23 @@
             src="media/spin.gif" class="spinright"> </h1>
         <hr>
         <div class="centeralign">
-            <img src="media/fish.gif">
+            <img src="media/fish.gif" id="fish">
+        </div>
+        <div id="dialogue" class="centeralign">
+            <p class="white centeralign" id="dialoguetext">
+              I'm Gigglemouth. Nice to meet you.
+            </p>
+            <input class = "nameinputform" id="nameinputform" type="text">
+            <button class = "nameinputform" id="nameinputformbutton" onclick="getNameInput()">Submit!</button>
+            <p class="white centeralign dialogueoptions" id="dialoguewherefrom">
+              <u>Where are you from?</u>
+            </p>
+            <p class="white centeralign dialogueoptions" id="dialoguewhereami">
+              <u>Where are we?</u>
+            </p>
+            <p class="white centeralign dialogueoptions" id="dialoguewhatsyourname">
+              <u>What's your full name?</u>
+            </p>
         </div>
       </div>
 
@@ -35,3 +51,7 @@
   </div>
 </body>
 <script src = "fish.js"></script>
+<script
+			  src="https://code.jquery.com/jquery-3.6.1.js"
+			  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+			  crossorigin="anonymous"></script>
