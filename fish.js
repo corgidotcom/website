@@ -13,7 +13,8 @@ let dialogueOption2;
 let dialogueOption3;
 let nameinputformbutton;
 var pressure;
-var inotherdialogue;
+var noname
+var nameIsGigglemouth
 function getNameInput(){
     $(".nameinputform").fadeOut(1000, function(){
         $("#dialoguetext").fadeOut(1000, function(){
@@ -26,10 +27,12 @@ function getNameInput(){
 function niceName(){
     if(nameinput.toLowerCase().includes("gigglemouth"))
     {
+    nameIsGigglemouth = true
     document.getElementById('dialoguetext').innerHTML = nameinput + "...? What a coincidence, we have the same name. What can I do for you?";
     }
     else if(nameinput.trim() == ""){
     document.getElementById('dialoguetext').innerHTML = "You don't want to tell me your name? I understand. What can I do for you?";
+    noname = true
     }
     else{
     document.getElementById('dialoguetext').innerHTML = nameinput + "... What a nice name. What can I do for you?";
@@ -146,6 +149,8 @@ window.onload = () => {
     promptanswered = false
     pressure = 0
     promptnotanswered = true
+    nameIsGigglemouth = false
+    noname = false
     nameinputformbutton = document.getElementById('nameinputformbutton')
     dialogueOption1 = document.getElementById('dialoguewherefrom')
     dialogueOption2 = document.getElementById('dialoguewhereami')
