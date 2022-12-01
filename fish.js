@@ -115,7 +115,7 @@ function dialogueChoices() {
                                 $("#dialoguewherefrom").fadeOut(700, function(){
                                     $("#dialoguetext").fadeOut(700, function(){
                                         document.getElementById('dialoguewherefrom').innerHTML = "<u>Where are you from?</u>";
-                                        document.getElementById('dialoguetext').innerHTML = "My name is" + fullname + " Please don't make fun of me or my name. I Will be Very Sad And Might Start Crying.";
+                                        document.getElementById('dialoguetext').innerHTML = "My name is " + fullname + " Please don't make fun of me or my name. I Will be Very Sad And Might Start Crying.";
                                         $("#dialoguetext").fadeIn(1500, function(){
                                             $("#dialoguewherefrom").fadeIn(1000, function(){
                                                 $("#dialoguewhereami").fadeIn(1000, function(){
