@@ -228,7 +228,9 @@ window.onload = () => {
         if(fishdialogue == 1)
         {
             dialogueInProgress = true
-            $("#dialoguetext").fadeIn(3000);
+            $("#instruction").fadeOut(1500, function(){
+                $("#dialoguetext").fadeIn(3000);
+            })
             fishdialogue = 2
             dialogueInProgress = false
         }
