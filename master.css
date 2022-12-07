@@ -41,7 +41,7 @@ hr {
     height: 3px;
 }
 
-a { text-decoration:none; color:white;}
+a {text-decoration:none; color:white;}
 a:visited { text-decoration:none; color:white;}
 a:hover { text-decoration:none; color:white;}
 a:focus { text-decoration:none; color:white;}
@@ -297,6 +297,9 @@ body {
 .kirbygif{
     animation-duration: 1s;
     width: 300px;
+}
+.clickables{
+    cursor: url('media/bluestar.png'), auto;
 }
 * {
     cursor: url('media/star.png'), auto;

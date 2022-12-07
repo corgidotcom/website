@@ -21,7 +21,7 @@
             src="media/spin.gif" class="spinright"> </h1>
         <hr>
         <div class="centeralign">
-            <img src="media/fish.gif" id="fish">
+            <img src="media/fish.gif" id="fish" class="clickables">
         </div>
         <div id="dialogue" class="centeralign">
             <p class="white centeralign fontsize15" id="instruction">Click the fish to iniate a conversation.</p>
@@ -29,14 +29,14 @@
               I'm Gigglemouth. Nice to meet you.
             </p>
             <input class = "nameinputform" id="nameinputform" type="text">
-            <button class = "nameinputform" id="nameinputformbutton" onclick="getNameInput()">Submit!</button>
-            <p class="white centeralign dialogueoptions" id="dialoguewherefrom">
+            <button class = "nameinputform clickables" id="nameinputformbutton" onclick="getNameInput()">Submit!</button>
+            <p class="white centeralign dialogueoptions" id="dialoguechoice1">
               <u>Where are you from?</u>
             </p>
-            <p class="white centeralign dialogueoptions" id="dialoguewhereami">
+            <p class="white centeralign dialogueoptions" id="dialoguechoice2">
               <u>Where are we?</u>
             </p>
-            <p class="white centeralign dialogueoptions" id="dialoguewhatsyourname">
+            <p class="white centeralign dialogueoptions" id="dialoguechoice3">
               <u>What's your full name?</u>
             </p>
         </div>
@@ -44,7 +44,7 @@
 
     </div>
     <div class="todolist">
-      <img src="media/pause.png" class="musicbutton">
+      <img src="media/pause.png" class="musicbutton clickables">
     </div>
     <audio autoplay="" loop="" id="bgm3">
      <source src="media/bgm3.mp3" autoplay="true" width="10" height="10">

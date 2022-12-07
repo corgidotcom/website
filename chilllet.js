@@ -8,11 +8,8 @@ window.onload = () => {
     audio = document.getElementById("desire");
     audio.volume = 0.2
     audio.paused = false
-    if (audio.paused) {
-        musicbutton.setAttribute('src', "media/play.png")
-    } else {
-        musicbutton.setAttribute('src', "media/pause.png")
-    }
+    $("a").addClass("clickables");
+    $("u").addClass("clickables");
     document.addEventListener('keydown', event => {
         if (event.key === "=" || event.key === "+" ) {
             if(audio.volume >= 0.95){
@@ -75,5 +72,10 @@ window.onload = () => {
             audio.play();
             musicbutton.setAttribute('src', "media/pause.png")
         }
+    }
+    if (audio.paused) {
+        musicbutton.setAttribute('src', "media/play.png")
+    } else {
+        musicbutton.setAttribute('src', "media/pause.png")
     }
 }
