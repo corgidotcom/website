@@ -51,11 +51,13 @@ function niceName() {
     else {
         randomvalue = Math.random() * 100;
         if (randomvalue <= 1) {
+            console.log("mushroom path true, random value is", randomvalue)
             document.getElementById('dialoguetext').innerHTML = nameinput + "... Interesting... Interesting... Listen, I need you to do something for me. Go to your backyard, and if you have none, go to a local park, and PLANT MUSHROOMS. I need you to grow some rare mushrooms. Come back when you are done. Now Go.";
             console.log('randomvalue is', randomvalue);
             mushroom = true
         }
         else {
+                    console.log("mushroom path false, random value is", randomvalue)
             randomvalue = Math.floor(Math.random() * 4);
             console.log('randomvalue is', randomvalue)
             if (randomvalue == 0) {

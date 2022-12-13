@@ -274,6 +274,9 @@ body {
 .topmargin15{
     margin-top:-15px;
 }
+.topmargin-10{
+    margin-top:10px;
+}
 .automargin{
     margin:auto;
 }
@@ -295,8 +298,10 @@ body {
     color:rgb(0, 0, 0);
 }
 .kirbygif{
-    animation-duration: 1s;
     width: 300px;
+}
+.amygdalagif{
+    width: 600px;
 }
 .clickables{
     cursor: url('media/bluestar.png'), auto;
