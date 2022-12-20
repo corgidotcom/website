@@ -81,6 +81,11 @@
     border-style:solid;
     border-color:white;
 }
+.borderimgblack {
+    border:2px;
+    border-style:solid;
+    border-color:black;
+}
 .advert {
     background-color: #bebebe;
     line-height: 20px;
@@ -232,7 +237,7 @@
 }
 .catgif{
     width:100px;
-    position:fixed;
+    position:absolute;
     padding:5px 10px 10px 10px;
     top: 10px;
     right: 0;
