@@ -11,12 +11,17 @@ let nameinputform;
 let dialogueOption1;
 let dialogueOption2;
 let dialogueOption3;
+let dialogueOption4;
+let dialogueOption5;
 let nameinputformbutton;
 var pressure;
 var noname
 var nameIsGigglemouth;
 var randomvalue;
 var mushroom;
+var dialogue1complete;
+var dialogue2complete;
+var dialogue3complete;
 
 function fadeIn(name, time) {
     return new Promise((res, rej) => {
@@ -104,6 +109,8 @@ async function dialogueChoices() {
         await fadeIn("#dialoguechoice3", 1000)
 
         dialogueOption1.onclick = async function () {
+
+            await fadeOut("#dialoguechoice4", 700)
             
             await fadeOut("#dialoguechoice3", 700)
 
@@ -122,7 +129,8 @@ async function dialogueChoices() {
             }
 
             else if (pressure == 2) {
-                document.getElementById('dialoguetext').innerHTML = "Do you really want to know? Fine. I'm from Heptinuputus. I told you you wouldn't have heard of it. It's not relevant anyways.";
+                document.getElementById('dialoguetext').innerHTML = "Do you really want to know? Fine. I'm from Blomy World. I told you you wouldn't have heard of it. It's not relevant anyways.";
+                dialogue1complete = true
             }
 
             else if (pressure > 2) {
@@ -154,10 +162,14 @@ async function dialogueChoices() {
                 await fadeIn("#dialoguechoice2", 1000)
                 await fadeIn("#dialoguechoice3", 1000)
             }
+            if(dialogue1complete && dialogue2complete && dialogue3complete){
+                await fadeIn("#dialoguechoice4", 1000)
+            }
         };
 
 
         dialogueOption2.onclick = async function () {
+            await fadeOut("#dialoguechoice4", 700)
             await fadeOut("#dialoguechoice3", 700)
             await fadeOut("#dialoguechoice2", 700)
             await fadeOut("#dialoguechoice1", 700)
@@ -167,12 +179,17 @@ async function dialogueChoices() {
             await fadeIn("#dialoguetext", 1500)
             await fadeIn("#dialoguechoice1", 1000) 
             await fadeIn("#dialoguechoice3", 1000)
+            dialogue2complete = true
+            if(dialogue1complete && dialogue2complete && dialogue3complete){
+                await fadeIn("#dialoguechoice4", 1000)
+            }
                             
         };
                                     
 
 
         dialogueOption3.onclick = async function () {
+            await fadeOut("#dialoguechoice4", 700)
             await fadeOut("#dialoguechoice3", 700)
             await fadeOut("#dialoguechoice2", 700)
             await fadeOut("#dialoguechoice1", 700)
@@ -182,8 +199,24 @@ async function dialogueChoices() {
             await fadeIn("#dialoguetext", 1500)
             await fadeIn("#dialoguechoice1", 1000)
             await fadeIn("#dialoguechoice2", 1000)
+            dialogue3complete = true
+            if(dialogue1complete && dialogue2complete && dialogue3complete){
+                await fadeIn("#dialoguechoice4", 1000)
+            }
         }
-                        
+        dialogueOption4.onclick = async function () {
+            await fadeOut("#dialoguechoice4", 700)
+            await fadeOut("#dialoguechoice3", 700)
+            await fadeOut("#dialoguechoice2", 700)
+            await fadeOut("#dialoguechoice1", 700)
+            await fadeOut("#dialoguetext", 700)
+            document.getElementById('dialoguetext').innerHTML = "Welcome to my world.";
+            await fadeIn("#dialoguetext", 1500)
+            await fadeIn("#dialoguechoice5", 2000)
+        }           
+        dialogueOption5.onclick = async function () {
+            location.assign('blomyworld.html');
+        }           
     }
 };
 
@@ -208,6 +241,11 @@ window.onload = () => {
     dialogueOption1 = document.getElementById('dialoguechoice1')
     dialogueOption2 = document.getElementById('dialoguechoice2')
     dialogueOption3 = document.getElementById('dialoguechoice3')
+    dialogueOption4 = document.getElementById('dialoguechoice4')
+    dialogueOption5 = document.getElementById('dialoguechoice5')
+    dialogue1complete = false
+    dialogue2complete = false
+    dialogue3complete = false
     fullname = "Gigglemouth Twigglemoth-Thirdqueszit."
     origin = "The 9th ring in the squwy thunk sapharunq eliky oribetabitas sytas"
     audio.volume = 0.5
