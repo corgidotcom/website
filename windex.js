@@ -10,6 +10,7 @@ var animalphoto = document.getElementById('animalphoto')
 var body = document.getElementById('body')
 var animal = 'dog'
 var prompt = document.getElementById('prompt')
+var prompttext = document.getElementById('prompttext');
 var img = document.createElement("img");
 window.onload = () => {
     year = year.toString()
@@ -62,13 +63,17 @@ function formsubmit(){
     if(form.value.includes("rickroll")){
         window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     }
+    else if(form.value.includes('mushroom')){
+        prompttext.textContent = "oh !! I love those!"
+        popuptext(false, 2000)
+    }
+    else if(form.value.includes("apple")){
+        prompttext.textContent = "bleh! that's disgusting!"
+        popuptext(false, 2000)
+    }
     else{
-        prompt.style.display = 'inline-flex';
-        mushroom("media/mushroom.webp", 40, 40)
-        setTimeout(function(){
-            prompt.style.display = 'none';
-            document.body.removeChild(img)
-        }, 2000);
+        prompttext.textContent = "touch the red mushroom"
+        popuptext(true, 2000) 
     }
 }
 document.addEventListener('keydown', event => {
@@ -76,6 +81,18 @@ document.addEventListener('keydown', event => {
         formsubmit()
     }
 })
+function popuptext(domushroom, time){
+    prompt.style.display = 'inline-flex';
+        if(domushroom){
+            mushroom("media/mushroom.webp", 40, 40)
+        }
+        setTimeout(function(){
+            prompt.style.display = 'none';
+            if(domushroom){
+                document.body.removeChild(img)
+            }
+        }, time);
+}
 animalphoto.onclick = function(){
     console.log('animal clicked')
     if(animal === 'dog'){
