@@ -21,16 +21,23 @@
         <h1> <img src="media/spin.gif" class="spinleft"> the fishbowl <img
             src="media/spin.gif" class="spinright"> </h1>
         <hr>
+
+        <div class="box whitebg toplayer" id="prompt">
+          <p class="boxtext" id="prompttext"> I love that one! </p>
+        </div>
+
         <div class="centeralign">
             <img src="media/fish.gif" id="fish" class="clickables">
         </div>
+
         <div id="dialogue" class="centeralign">
-            <p class="white centeralign fontsize15" id="instruction">Click the fish to iniate a conversation.</p>
+            <p class="white centeralign fontsize15" id="instruction">Click the fish to iniate a conversation.</p> 
             <p class="white centeralign" id="dialoguetext">
               I'm Gigglemouth. Nice to meet you.
             </p>
             <input class = "nameinputform" id="nameinputform" type="text">
             <button class = "nameinputform clickables" id="nameinputformbutton" onclick="getNameInput()">Submit!</button>
+            <img src="media/mushroom2.gif" id="mushroomgif2" onclick="mushroomclicked(1000)" class="clickables">
             <p class="white centeralign dialogueoptions" id="dialoguechoice1">
               <u>Where are you from?</u>
             </p>

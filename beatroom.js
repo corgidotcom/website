@@ -6,7 +6,7 @@ var audio;
 window.onload = () => {
     musicbutton = document.querySelector('.musicbutton')
     audio = document.getElementById("beatroomsong");
-    audio.volume = 0.15
+    audio.volume = 0.25
     audio.paused = false
     $("a").addClass("clickables");
     $("u").addClass("clickables");

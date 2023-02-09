@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'Cloude Regular 1.0';
+    src: url('fonts/Cloude_Regular_102.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    size-adjust:200%;
+}
+
+@font-face {
+    font-family: 'Cloude Regular 1.0';
+    src: url('fonts/Cloude_Regular_Bold_102.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    size-adjust:200%;
+}
+
+@font-face {
+    font-family: 'typecast-italic';
+    src: url('fonts/Typecast-Italic.ttf');
+}
+
 #chilllethr {
     background: linear-gradient(90deg, rgba(175,31,31,1) 0%, rgba(190,190,190,1) 100%);
     width:450px;
@@ -177,6 +200,9 @@
 .white{
     color:white;
 }
+.whitebg{
+    background-color: white;
+}
 .gray{
     color:gray;
 }
@@ -210,6 +236,28 @@
     width:20px;
     height:20px;
 }
+.box{
+    width: 384px;
+    height: 216px;
+    left:0;
+    right:0;
+    position:absolute;
+    margin:0 auto;
+    border:black;
+    display:none;
+    justify-content: center;
+    align-items: center;  
+    border-width: 2px;
+    border-style:ridge;
+}
+.boxtext{
+    font-family: 'typecast-italic';
+    font-size: 50px;
+    color: black;
+}
+.toplayer{
+    z-index:8;
+}
 .dialogueoptions{
     display: none;
 }
@@ -222,6 +270,9 @@
 }
 .kirbygif{
     width: 300px;
+}
+.pxegif{
+    width:450px;
 }
 .amygdalagif{
     width: 600px;
@@ -241,4 +292,7 @@
     padding:5px 10px 10px 10px;
     top: 10px;
     right: 0;
+}
+#mushroomgif2{
+    display:none;
 }

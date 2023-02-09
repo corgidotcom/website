@@ -24,6 +24,20 @@ hr {
     border-width: 0;
     height: 3px;
 }
+span {
+    margin-left:50px;
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size:20px;
+    font-weight: 400;
+    color:black;
+    text-align: left;
+    transform:scaleX(325%);
+    font-style:italic;
+}
+.alignleft {
+    justify-content: left;
+}
 
 a {text-decoration:none; color:white;}
 a:visited { text-decoration:none; color:white;}
@@ -51,4 +65,75 @@ li {
 body {
     background-color: white;
     line-height:20px;
+}
+#lush{
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: shake 1s infinite;
+}
+@keyframes shake{
+    0%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    5%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    10%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    15%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    20%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    25%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    30%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    35%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    40%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    45%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    50%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    55%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    60%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    65%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    70%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    75%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    80%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    85%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    90%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+    95%{
+        transform: scaleX(350%) skewX(15deg);
+    }
+    100%{
+        transform: scaleX(350%) skewX(-15deg);
+    }
+
 }
