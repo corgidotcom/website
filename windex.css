@@ -1,0 +1,163 @@
+@font-face{
+    font-family:"typecast-italic";
+    src: url(media/Typecast-Italic.ttf)
+}
+body{
+    background-color:black;
+    overflow: hidden;
+    justify-content: center;
+    align-items:center;
+    animation: rainbowbg 10s infinite;
+    animation-play-state: running;
+}
+h1{
+    color:white;
+    font-family:'PT Serif', serif;
+    text-align:center;
+}
+h2{
+    color:white;
+    margin-top:-15px;
+    font-family:'PT Serif', serif;
+    text-align:center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+p{
+    color: white;
+    font-family:'Kanit', sans-serif;
+    text-align: center;
+}
+.centeralign{
+    text-align:center;
+}
+.topmargin200{
+    margin-top:200px;
+}
+.toplayer{
+    z-index: 9;
+}
+.black{
+    color:black
+}
+.white{
+    background:white;
+}
+.box{
+    width:25%;
+    left:0;
+    right:0;
+    height:25%;
+    position:absolute;
+    margin:0 auto;
+    border:black;
+    display:none;
+    justify-content: center;
+    align-items: center;  
+    border-width: 2px;
+    border-style:ridge;
+    margin-top:-100px;
+}
+.typecast{
+    font-family: 'typecast-italic', sans-serif;
+    font-size:5vw; 
+}
+span{
+    color: white;
+    display:inline-block;
+    font-family:'Kanit', sans-serif;
+    text-align: center;
+    letter-spacing: 5px;
+    animation: waveAnim 0.3s infinite;
+    animation-delay: calc(0.1s * var(--i));
+    animation-play-state: running;
+}
+.text-wrapper{
+    position: relative;
+    font-size:30px;
+}
+.alignright{
+    float:right;
+    padding:0px 50px 0px 5px;
+}
+#animalphoto{
+    animation: dogmove 10s infinite;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3d00e6, 0 0 40px #3d00e6, 0 0 50px #3d00e6, 0 0 60px #3d00e6, 0 0 70px #3d00e6;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #a491e8, 0 0 40px #a491e8, 0 0 50px #a491e8, 0 0 60px #a491e8, 0 0 70px #a491e8, 0 0 80px #a491e8; 
+  }
+}
+@keyframes waveAnim{
+    0%{
+        transform:rotate(-20deg)
+    }
+    25%{
+        transform:rotate(0)
+    }
+    50%{
+        transform:rotate(20deg)
+    }
+    75%{
+        transform:rotate(0)
+    }
+    100%{
+        transform:rotate(-20deg)
+    }
+}
+@keyframes dogmove {
+    0%{
+        translate: 0;
+        transform: rotateY(0);
+    }
+    37.5%{
+        translate:820px;   
+    }
+    52.5%{
+        transform: rotateY(180deg)
+    }
+    75%{
+        transform:translateY(-200px)
+    }
+    100%{
+    }
+}
+@keyframes rainbowbg{
+    0%{
+        background-color: black;
+    }
+    10%{
+        background-color:red;
+    }
+    20%{
+        background-color:orange;
+    }
+    30%{
+        background-color:yellow;
+    }
+    40%{
+        background-color: green;
+    }
+    50%{
+        background-color: blue;
+    }
+    60%{
+        background-color: indigo;
+    }
+    70%{
+        background-color: purple;
+    }
+    80%{
+        background-color: violet;
+    }
+    90%{
+        background-color:whitesmoke;
+    }
+    100%{
+        background-color: black;
+    }
+}
