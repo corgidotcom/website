@@ -63,10 +63,9 @@ window.onload = () => {
     })
 
     musicbutton.onclick = function(){
-        if(audio.paused == false)
         Onbuttoninteraction()
     }
-    Onbuttoninteraction = function(){
+    function Onbuttoninteraction(){
         if(audio.paused == false)
         {
             audio.pause();
@@ -80,7 +79,7 @@ window.onload = () => {
             console.log("Music Played")
         }
     }
-    if (audio.paused) {
+    if(audio.paused) {
         musicbutton.setAttribute('src', "media/play.png")
     } else {
         musicbutton.setAttribute('src', "media/pause.png")
