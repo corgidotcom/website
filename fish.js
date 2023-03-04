@@ -221,6 +221,7 @@ async function dialogueChoices() {
         await fadeIn("#dialoguechoice3", 1000)
 
         dialogueOption1.onclick = async function () {
+            let intransition = false;
 
             await fadeOut("#dialoguechoice4", 700)
             
@@ -249,7 +250,8 @@ async function dialogueChoices() {
                 document.getElementById('dialoguetext').innerHTML = "I already told you where I'm from.";
             }
 
-            pressure = pressure + 1
+            if(intransition == false){pressure = pressure + 1}
+            intransition = true
             console.log('pressure increased. Current pressure:', pressure)
 
             await fadeIn("#dialoguetext", 1500);
@@ -277,6 +279,7 @@ async function dialogueChoices() {
             if(dialogue1complete && dialogue2complete && dialogue3complete){
                 await fadeIn("#dialoguechoice4", 1000)
             }
+            intransition = false
         };
 
 
