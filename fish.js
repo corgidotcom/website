@@ -339,6 +339,8 @@ async function dialogueChoices() {
 
 window.onload = () => {
     musicbutton = document.querySelector('.musicbutton')
+    minus = document.querySelector('.minusbutton')
+    plus = document.querySelector('.plusbutton')
     audio = document.getElementById("bgm3");
     fish = document.getElementById('fish')
     document.getElementById('dialoguetext').style.display = "none"
@@ -373,38 +375,51 @@ window.onload = () => {
     origin = "The 9th ring in the squwy thunk sapharunq eliky oribetabitas sytas"
     audio.volume = 0.5
     audio.paused = false
+    function lowervolume(){
+            if(audio.volume <=0.05){
+            console.log('minus pressed; at minimum volume');
+            }
+            else{
+            console.log('minus pressed; volume decreased');
+            }
+            if(audio.volume <= 0.05){
+                audio.volume = 0.05
+            }
+            else{
+                audio.volume = audio.volume - 0.05
+            }
+    }
+    function raisevolume(){
+        if(audio.volume >= 0.95){
+            console.log('plus pressed; at max volume');
+        }
+        else{
+            console.log('plus pressed; volume increased')
+        }
+        if(audio.volume >= 0.95){
+            audio.volume = 0.95
+        }
+        else{
+            audio.volume = audio.volume + 0.05
+        }
+    }
     document.addEventListener('keydown', event => {
-        if (event.key === "=" || event.key === "+") {
-            if (audio.volume >= 0.95) {
-                console.log('plus pressed; at max volume');
-            }
-            else {
-                console.log('plus pressed; volume increased')
-            }
-            if (audio.volume >= 0.95) {
-                audio.volume = 0.95
-            }
-            else {
-                audio.volume = audio.volume + 0.05
-            }
+        if (event.key === "=" || event.key === "+" ) {
+            raisevolume()
         }
     })
     document.addEventListener('keydown', event => {
         if (event.key === "-") {
-            if (audio.volume <= 0.05) {
-                console.log('minus pressed; at minimum volume');
-            }
-            else {
-                console.log('minus pressed; volume decreased');
-            }
-            if (audio.volume <= 0.05) {
-                audio.volume = 0.05
-            }
-            else {
-                audio.volume = audio.volume - 0.05
-            }
+            lowervolume()
         }
     })
+
+    minus.onclick = function(){
+        lowervolume()
+    }
+    plus.onclick = function(){
+        raisevolume()
+    }
     document.addEventListener('keyup', event => {
         if (event.code === 'Space') {
             if (audio.paused == false) {
@@ -456,8 +471,3 @@ window.onload = () => {
         musicbutton.setAttribute('src', "media/pause.png")
     }
 }
-
-function openalbuminfo(album){
-    
-}
-
