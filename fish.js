@@ -24,12 +24,12 @@ var dialogue2complete;
 var dialogue3complete;
 var prompt;
 var prompttext;
-var img;
 var popupIsUp;
 var entrancement;
 var mushroomgif;
 var inFormDialogue;
 var entranced;
+var namechecked;
 
 function fadeIn(name, time) {
     return new Promise((res, rej) => {
@@ -78,7 +78,7 @@ async function popuptext(entranced, time){
     popupIsUp = true
     if(entranced){
         setInterval(function (){
-            createMushroom("media/mushroom2.gif", 40, 40, true)
+            createMushroom("media/mushroom2.gif", 40, 40)
         }, 300)
     }
     if(entranced == false){
@@ -91,46 +91,20 @@ async function popuptext(entranced, time){
         
 }
 
-function createMushroom(src, width, height, isEntranced) {
-    var randomizer
-    if(isEntranced){
-        img.src = src;
-        img.width = width;
-        img.height = height;          
-        img.style.position = 'absolute';
-        img.style.zIndex = 10
-        randomizer = document.body.clientHeight * Math.random();
-        if(randomizer > 550){
-            img.style.top = 550 + 'px';
-        }
-        else{
-            img.style.top = randomizer + 'px'
-        }
-        img.style.left = document.body.clientWidth * Math.random() + 'px';
-        document.body.appendChild(img);
+function createMushroom(src, width, height) {
+        var img = document.createElement('img')
+        img.setAttribute('src', src);
+        img.setAttribute('width', width);
+        img.setAttribute('height', height);   
+        var randomx = Math.floor(document.body.clientWidth * Math.random())
+        var randomy = Math.floor(2 * document.body.clientHeight * Math.random())
+        img.setAttribute('style', 'position:absolute;' + 'top:' + randomy + 'px;' + 'left:' + randomx + 'px;zIndex:10');
+        document.body.appendChild(img)
     }
-    else{
-        img.src = src;
-        img.width = width;
-        img.height = height;
-        
-        img.style.position = 'absolute';
-        img.style.zIndex = 10
-        randomizer = document.body.clientHeight * Math.random();
-        if(randomizer > 550){
-            img.style.top = 550 + 'px';
-        }
-        else{
-            img.style.top = randomizer + 'px'
-        }
-        img.style.left = document.body.clientWidth * Math.random() + 'px';
-        document.body.appendChild(img);
-    }
-}
 
 function mushroomclicked(time){
     console.log('mushroom was definitely clicked')
-    if(entrancement < 10){
+    if(entrancement < 10){ // value should be 10
         popuptext(false, time)
     }
     else{
@@ -146,11 +120,14 @@ document.addEventListener('keydown', event => {
     }
 })
 async function getNameInput() {
-    await fadeOut(".nameinputform", 1000)
-    await fadeOut("#dialoguetext", 1000)
-    nameinput = document.getElementById('nameinputform').value;
-    console.log('user\'s name is', nameinput + "!")
-    dialogueChoices()       
+    if(namechecked == false){
+        namechecked = true
+        await fadeOut(".nameinputform", 1000)
+        await fadeOut("#dialoguetext", 1000)
+        nameinput = document.getElementById('nameinputform').value;
+        console.log('user\'s name is', nameinput + "!")
+        dialogueChoices()
+    }
 }
 function niceName() {
     if (nameinput.length >= 40){
@@ -166,12 +143,13 @@ function niceName() {
     }
     else {
         randomvalue = Math.random() * 100;
-        if (randomvalue <= 0) { // should be 1
+        if (randomvalue <= 10) { // should be 10 (value = percentage chance of mushroom)
             console.log("mushroom path true, random value is", randomvalue)
             document.getElementById('dialoguetext').textContent = nameinput + ", I want you to have these ancient spores. You can grow them wherever you like as long as it is not populated since these mushrooms are very deadly. Come back when you are done, and be careful.";
             mushroom = true
         }
         else {
+            mushroom = false
             console.log("mushroom path false, random value is", randomvalue)
             randomvalue = Math.floor(Math.random() * 4);
             console.log('randomvalue is', randomvalue)
@@ -191,6 +169,7 @@ function niceName() {
     }
 }
 async function dialogueChoices() {
+    namechecked = true
     niceName()
     if (mushroom) {
         await fadeIn("#dialoguetext", 2500);
@@ -375,6 +354,7 @@ window.onload = () => {
     origin = "The 9th ring in the squwy thunk sapharunq eliky oribetabitas sytas"
     audio.volume = 0.5
     audio.paused = false
+    namechecked = false
     function lowervolume(){
             if(audio.volume <=0.05){
             console.log('minus pressed; at minimum volume');

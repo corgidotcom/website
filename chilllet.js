@@ -5,7 +5,7 @@ var audio;
 
 window.onload = () => {
     musicbutton = document.querySelector('.musicbutton')
-    audio = document.getElementById("desire");
+    audio = document.getElementById("chilllet");
     minus = document.querySelector('.minusbutton')
     plus = document.querySelector('.plusbutton')
     audio.volume = 0.2
