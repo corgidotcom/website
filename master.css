@@ -20,7 +20,26 @@
     font-family: 'typecast-italic';
     src: url('fonts/Typecast-Italic.ttf');
 }
-
+@keyframes gradient{
+    0%{
+        background-position-x:0px;
+    }
+    100%{
+        background-position-x:210px;
+    }
+}
+html, body{
+    margin:0;
+    height:100%;
+}
+.rainbow{
+    background: repeating-linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,165,0,1) 20%, rgba(255,255,0,1) 40%, rgba(0,255,0,1) 60%, rgba(0,0,255,1) 80%, rgba(255,0,255,1) 100%);
+    background-size: 105px 105px;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 2s linear infinite forwards;
+}
 #chilllethr {
     background: linear-gradient(90deg, rgba(175,31,31,1) 0%, rgba(190,190,190,1) 100%);
     width:450px;
@@ -31,7 +50,11 @@
 }
 .chillletprice{
     margin-top:-70px;
-    font-size:75px
+    font-size:75px;
+    left:0;
+    right:0;
+    text-align: center;
+    position: absolute;
 }
 
 #wrapper {
@@ -228,6 +251,50 @@
 .gray{
     color:gray;
 }
+.guestbook{
+    color:white;
+    font-family: 'typecast-italic';
+    font-size: 24px;
+    text-align:left;
+}
+.guestbookentries{
+    padding-top:5px;
+    padding-bottom: 5px;
+    border: 10px;
+} 
+.postbutton{
+    color:black;
+    font-family: 'typecast-italic';
+    font-weight: bold;
+    font-size: 20px;
+    text-align:left;
+}
+.inputfieldset{
+    background-image: url("https://i.pinimg.com/originals/02/23/f3/0223f3fcf192f28b6a0d6bc814e7d881.gif");
+}
+.entryfieldset{
+    background-image: url('https://i.pinimg.com/originals/66/9f/9e/669f9e9981a7cb4bfe804c72fb79dbdc.gif');
+}
+.pguestbook{
+    font-family: 'Cloude Regular 1.0';
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.entrytext{
+    font-family: 'typecast-italic';
+    font-weight: normal;
+    font-size: 24px;
+}
+.guestbookdiv{
+    border:10px;
+    padding:0px 10px 10px 10px;
+}
+.inputlabel{
+    width: 100px;
+}
+.guestbookwrapper{
+    width: 550px;
+}
 .buttons{
     margin-left:10px;
     height:31px;
@@ -282,13 +349,6 @@
 }
 .dialogueoptions{
     display: none;
-}
-.nameinputform{
-    display: none;
-    font-family: 'League Spartan', sans-serif;
-    font-size:16px;
-    font-weight: 400;
-    color:rgb(0, 0, 0);
 }
 .kirbygif{
     width: 300px;

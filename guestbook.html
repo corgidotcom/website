@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="master.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600&display=swap" rel="stylesheet">
+  <title>guestbook</title> <!-- corgi's guestbook -->
+  <link rel="icon" type="image/webp" href="media/guestbook.webp"> 
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="topleftarrow">
+      <a href="home.html"><img src="media/leftarrow.png" class="backarrow clickables"></a>
+  </div>  
+    <div id="title">
+      <div id="titlewrapper" style="margin-left:-50px;">
+        <h1> <img src="media/spin.gif" class="spinleft">corgi's guestbook<img
+            src="media/spin.gif" class="spinright"> </h1>
+        <hr>
+        <div class="centeralign guestbookwrapper">
+
+          <div class="guestbookdiv">
+            <form onsubmit="uploadForm(); return false" class="guestbook"> <!-- method="POST" -->
+              <fieldset class="inputfieldset">
+                <legend> Sign Here </legend>
+                  <label class="inputlabel">Name:</label><input id="nameform" type="text" name="name">
+                  <br>
+                  <label class="inputlabel">Location:</label><input id="locform" type="text" name="location">
+                  <br>
+                  <label class="inputlabel">Comment:</label><input id="comform" type="text" name="comment">
+                  <br>
+                  <input class="clickables postbutton" type="submit" value="Post!">
+              </fieldset>
+            </form>  
+            <p class="centeralign pguestbook"> sorry if it doesn't work lol i made it myself <br> after posting, wait a few seconds, then refresh. your entry should show up</p>
+          </div>
+
+          <hr style="margin-top: 10px;">
+          <div id="entries">
+            
+          </div>
+          <!-- <div class="guestbookentries">
+            <fieldset class="entryfieldset guestbook">
+              <label>Name: </label>
+              <label>Location: </label>
+              <label>Comment: </label>
+            </fieldset>
+          </div>
+          <div class="guestbookentries">
+            <fieldset class="entryfieldset guestbook">
+              <label>Name: </label>
+              <label>Location: </label>
+              <label>Comment: </label>
+            </fieldset>
+          </div> -->
+        </div>
+
+      </div>
+
+    </div>
+    <div class="todolist">
+      <img src="media/minus.png" class="minusbutton clickables">
+      <img src="media/plus.png" class="plusbutton clickables">
+      <img src="media/pause.png" class="musicbutton clickables">
+    </div>
+    <audio autoplay="" loop="" id="guestroomsong">
+     <source src="media/idky.mp3" autoplay="true" width="10" height="10">
+   </audio>
+  </div>
+</body>
+<script src = "guestbook.js"></script>
+<script
+			  src="https://code.jquery.com/jquery-3.6.1.js"
+			  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+			  crossorigin="anonymous"></script>

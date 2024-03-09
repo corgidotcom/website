@@ -1,7 +1,12 @@
 let musicbutton;
 var audio;
 
-
+function increasingtext(){
+    let price = document.getElementById("price")
+    setInterval (function(){
+        price.innerText = price.innerText.slice((price.innerText) * -1, -3) + "9" + ".99"
+    }, 900)
+}
 
 window.onload = () => {
     musicbutton = document.querySelector('.musicbutton')
@@ -89,4 +94,5 @@ window.onload = () => {
     } else {
         musicbutton.setAttribute('src', "media/pause.png")
     }
+    increasingtext()
 }

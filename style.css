@@ -67,3 +67,13 @@ body {
 * {
     cursor: url('media/star.png'), auto;
 }
+fieldset {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+label{
+    float: left;
+    clear: left;
+    text-align: left;
+}
