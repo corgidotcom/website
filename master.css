@@ -269,6 +269,9 @@ html, body{
     font-size: 20px;
     text-align:left;
 }
+.nameinputform{
+    display: none;
+}
 .inputfieldset{
     background-image: url("https://i.pinimg.com/originals/02/23/f3/0223f3fcf192f28b6a0d6bc814e7d881.gif");
 }
