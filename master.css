@@ -20,6 +20,12 @@
     font-family: 'typecast-italic';
     src: url('fonts/Typecast-Italic.ttf');
 }
+
+@font-face {
+    font-family: 'ModeSeven';
+    src: url('fonts/terminal.ttf');
+}
+
 @keyframes gradient{
     0%{
         background-position-x:0px;
@@ -377,6 +383,78 @@ html, body{
     padding:5px 10px 10px 10px;
     top: 10px;
     right: 0;
+}
+.albumtext{
+    font-family: 'ModeSeven';
+}
+.ratingtext{
+    max-width: 100px;
+    margin-top:5px;
+}
+.reviewtext{
+    font-family: 'ModeSeven';
+    margin-top:3px;
+    font-size:15px;
+}
+.reviewtitle{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.rating{
+    display:flex;
+    flex-direction: column;
+}
+.albumreviews{
+    position: relative;
+    height:auto;
+    background-color: black;
+    background-image: url('media/grid.png');
+    background-size: 100% 100%;
+}
+.reviewbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 10px;
+    max-width: 500px;
+}
+.review{
+    border:2px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color:white;
+    padding:5px;
+    margin-bottom:10px;
+    display:flex;
+}
+.albumtitle{
+    margin-top:2px;
+    margin-bottom:2px;
+    font-size:15px;
+}
+.greenglow{
+    color:rgb(36, 204, 68);
+    text-shadow: 1px 1px 2px rgb(36, 204, 68), 0 0 1em rgb(36, 204, 68), 0 0 0.2em rgb(36, 204, 68);
+}
+.redglow{
+    color:red;
+    text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+}
+.yellowglow{
+    color:yellow;
+    text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
+}
+.albumbody{
+    font-size:12px;
+    margin:0;
+    line-height:13px;
+}
+.albumcover{
+    display: flex;
+    height:100px;
+    border: 2px;
+    border-style: solid;
+    border-color:black;
 }
 #mushroomgif2{
     display:none;

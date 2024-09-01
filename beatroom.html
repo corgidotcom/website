@@ -22,11 +22,36 @@
             src="media/spin.gif" class="spinright"> </h1>
         <hr>
         <div class="centeralign">
-            <a href="https://open.spotify.com/track/0oxYB9GoOIDrdzniNdKC44?si=27182fe7cf4b43ec" target="_blank"><img class="borderimg clickables topmargin-10" src="https://media1.tenor.com/m/qFBicCj_O1QAAAAC/flower.gif"></a>
+            <a href="https://open.spotify.com/track/2riZAvd3GGUp0Wm9cJZD4r?si=c1a7da118a874b78" target="_blank"><img class="borderimg clickables topmargin-10" src="media/train.gif"></a>
             <p class="fontsize15 centeralign">my fav song at the moment, or just any song i find cool :) hopefully updated often, if i'm not lazy.</p>
-            <p class="fontsize15 centeralign topmargin15">song: when the sun hits - slowdive<br> click the gif to find it on spotify</p>
+            <p class="fontsize15 centeralign topmargin15">song: beach life-in-death by car seat headrest<br> click the gif to find it on spotify</p>
+
+            <!-- IDEA: Click on the album cover to preview my fav song - 15 or 20 second intervals and pause after -->
+            <fieldset class="albumreviews">
+              <p class="albumtext fontsize20 greenglow reviewtitle"> > Album Reviews</p>
+                <div class="review">
+                  <div class="rating">
+                    <img class="albumcover clickables" id="cshcover" src="media/twinfantasy.jpg">
+                    <p class="albumtext ratingtext yellowglow centeralign">10/10</p>
+                  </div>
+                  <div class="reviewbox">
+                    <p class="albumtext albumtitle redglow"> > Twin Fantasy (Mirror to Mirror) by Car Seat Headrest</p>
+                    <br>
+                    <p class="albumtext albumbody greenglow"> <span class="yellowglow"> Genre: Lo-Fi Indie Rock | Year: 2011 | Review Date: 08/31/24 </span> <br>This album genuinely means so much to me.The entire album explores themes of teen love in its most raw and pure form as written and recorded by a 19 year-old Will Toledo. 
+                    Songs like "Beach Life-In-Death" explore the bittersweet feeling of falling in love and all the secondary emotions that come with it, which I have not seen represented anywhere else so accurately.
+                    Start to finish, this album is a punch in the gut, with tracks like "Sober To Death" and "Twin Fantasy (Those Boys)" dropping tear-jerking lyrics and melodies that make you reflect on past relationships, with both rose and grey-tinted glasses. </p>
+                    <br>
+                    <p class="albumtext albumbody redglow"> Favorite Song: Beach Life-In-Death / Famous Prophets (Minds) </p>
+                    <br>
+                    <p class="albumtext albumbody redglow"> Favorite Lyric: "I haven't looked at the sun in so long, I'd forgotten how much it hurt to" <span class="greenglow"><i> on Famous Prophets (Minds)</i></span></p>
+                  </div>
+                </div>
+                <p class="albumtext yellowglow fontsize20 centeralign"> ...and more reviews coming (maybe)</p>
+            </fieldset>
         </div>
       </div>
+
+      
 
     </div>
     
@@ -36,8 +61,11 @@
       <img src="media/pause.png" class="musicbutton clickables">
     </div>
     <audio autoplay="" loop="" id="beatroomsong">
-     <source src="media/souvlaki.mp3" autoplay="true" width="10" height="10">
+     <source src="media/beachlifeindeath.mp3" autoplay="true" width="10" height="10">
    </audio>
+   <audio id="twinfantasypreview">
+    <source src="media/twinfantasypreview.mp3" width="10" height="10">
+  </audio>
   </div>
 </body>
 <script src = "beatroom.js"></script>

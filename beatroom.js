@@ -8,6 +8,7 @@ window.onload = () => {
     audio = document.getElementById("beatroomsong");
     minus = document.querySelector('.minusbutton')
     plus = document.querySelector('.plusbutton')
+    cshcover = document.getElementById('cshcover')
     audio.volume = 0.25
     audio.paused = false
     $("a").addClass("clickables");
@@ -25,6 +26,11 @@ window.onload = () => {
             else{
                 audio.volume = audio.volume - 0.05
             }
+    }
+    function switchsong(song){
+        audio.pause();
+        audio = song;
+        audio.play();
     }
     function raisevolume(){
         if(audio.volume >= 0.95){
@@ -56,7 +62,18 @@ window.onload = () => {
     }
     plus.onclick = function(){
         raisevolume()
-    }  
+    } 
+    cshcover.onclick = function(){
+        oldvolume = audio.volume;
+        oldtime = audio.currentTime;
+        switchsong(document.getElementById("twinfantasypreview"));
+        audio.volume = oldvolume;
+        audio.paused = false;
+        audio.addEventListener("ended", function(){
+            switchsong(document.getElementById("beatroomsong"));
+            audio.currentTime = oldtime;
+       });
+    }
     document.addEventListener('keyup', event => {
         if (event.code === 'Space') {
             console.log('Space pressed');
