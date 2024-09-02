@@ -8,7 +8,14 @@ window.onload = () => {
     audio = document.getElementById("beatroomsong");
     minus = document.querySelector('.minusbutton')
     plus = document.querySelector('.plusbutton')
-    cshcover = document.getElementById('cshcover')
+    twinfantasycover = document.getElementById('twinfantasycover')
+    icedancercover = document.getElementById('icedancercover')
+    frailtycover = document.getElementById('frailtycover')
+    madvillainycover = document.getElementById('madvillainycover')
+    exhibitionmodecover = document.getElementById('exhibitionmodecover')
+    bratcover = document.getElementById('bratcover')
+    iusedtojustcryaboutitcover = document.getElementById('iusedtojustcryaboutitcover')
+    theglowpt2cover = document.getElementById('theglowpt2cover')
     audio.volume = 0.25
     audio.paused = false
     $("a").addClass("clickables");
@@ -46,6 +53,34 @@ window.onload = () => {
             audio.volume = audio.volume + 0.05
         }
     }
+    function pauseplay(){
+        if(audio.paused == false)
+            {
+                audio.pause();
+                musicbutton.setAttribute('src', "media/play.png")
+            }
+            else
+            {
+                if(audio != document.getElementById("beatroomsong")){
+                    switchsong(document.getElementById("beatroomsong"));
+                } else{
+                    audio.play();
+                }
+                musicbutton.setAttribute('src', "media/pause.png");
+            }
+    }
+    function playpreview(previewsong){
+        oldvolume = audio.volume;
+        oldtime = audio.currentTime;
+        switchsong(previewsong);
+        audio.volume = oldvolume;
+        audio.currentTime = 0;
+        audio.paused = false;
+        audio.addEventListener("ended", function(){
+            switchsong(document.getElementById("beatroomsong"));
+            audio.currentTime = oldtime;
+       });
+    }
     document.addEventListener('keydown', event => {
         if (event.key === "=" || event.key === "+" ) {
             raisevolume()
@@ -63,33 +98,13 @@ window.onload = () => {
     plus.onclick = function(){
         raisevolume()
     } 
-    cshcover.onclick = function(){
-        oldvolume = audio.volume;
-        oldtime = audio.currentTime;
-        switchsong(document.getElementById("twinfantasypreview"));
-        audio.volume = oldvolume;
-        audio.paused = false;
-        audio.addEventListener("ended", function(){
-            switchsong(document.getElementById("beatroomsong"));
-            audio.currentTime = oldtime;
-       });
-    }
+   
     document.addEventListener('keyup', event => {
         if (event.code === 'Space') {
+            pauseplay();
             console.log('Space pressed');
-            if(audio.paused == false)
-            {
-                audio.pause();
-                musicbutton.setAttribute('src', "media/play.png")
-            }
-            else
-            {
-                audio.play();
-                musicbutton.setAttribute('src', "media/pause.png")
-            }
         }
     })
-
     musicbutton.onclick = function(){
         Onbuttoninteraction()
     }
@@ -111,5 +126,31 @@ window.onload = () => {
         musicbutton.setAttribute('src', "media/play.png")
     } else {
         musicbutton.setAttribute('src', "media/pause.png")
+    }
+
+    // Album Cover Onclick events
+    twinfantasycover.onclick = function(){
+        playpreview(document.getElementById("twinfantasypreview"))
+    }
+    icedancercover.onclick = function(){
+        playpreview(document.getElementById("icedancerpreview"))
+    }
+    frailtycover.onclick = function(){
+        playpreview(document.getElementById("frailtypreview"))
+    }
+    madvillainycover.onclick = function(){
+        playpreview(document.getElementById("madvillainypreview"))
+    }
+    exhibitionmodecover.onclick = function(){
+        playpreview(document.getElementById("exhibitionmodepreview"))
+    }
+    bratcover.onclick = function(){
+        playpreview(document.getElementById("bratpreview"))
+    }
+    iusedtojustcryaboutitcover.onclick = function(){
+        playpreview(document.getElementById("iusedtojustcryaboutitpreview"))
+    }
+    theglowpt2cover.onclick = function(){
+        playpreview(document.getElementById("theglowpt2preview"))
     }
 }

@@ -220,6 +220,7 @@ html, body{
 .fontsize15{
     font-size:15px;
 }
+
 .spinleft{
     margin-right:10px;
     height:55px;
@@ -408,8 +409,6 @@ html, body{
     position: relative;
     height:auto;
     background-color: black;
-    background-image: url('media/grid.png');
-    background-size: 100% 100%;
 }
 .reviewbox{
     display: flex;
@@ -426,6 +425,8 @@ html, body{
     padding:5px;
     margin-bottom:10px;
     display:flex;
+    background-image: url('media/grid.png');
+    background-size: 100% 100%;
 }
 .albumtitle{
     margin-top:2px;
@@ -443,6 +444,10 @@ html, body{
 .yellowglow{
     color:yellow;
     text-shadow: 1px 1px 2px yellow, 0 0 1em yellow, 0 0 0.2em yellow;
+}
+.blueglow{
+    color:blue;
+    text-shadow: 1px 1px 2px blue, 0 0 1em blue, 0 0 0.2em blue;
 }
 .albumbody{
     font-size:12px;
