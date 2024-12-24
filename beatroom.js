@@ -16,6 +16,7 @@ window.onload = () => {
     bratcover = document.getElementById('bratcover')
     iusedtojustcryaboutitcover = document.getElementById('iusedtojustcryaboutitcover')
     theglowpt2cover = document.getElementById('theglowpt2cover')
+    thecolourandtheshapecover = document.getElementById('thecolourandtheshapecover')
     audio.volume = 0.25
     audio.paused = false
     $("a").addClass("clickables");
@@ -152,5 +153,11 @@ window.onload = () => {
     }
     theglowpt2cover.onclick = function(){
         playpreview(document.getElementById("theglowpt2preview"))
+    }
+    wallsocketcover.onclick = function(){
+        playpreview(document.getElementById("wallsocketpreview"))
+    }
+    thecolourandtheshapecover.onclick = function(){
+        playpreview(document.getElementById("thecolourandtheshapepreview"))
     }
 }
